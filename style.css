@@ -1,4 +1,4 @@
-   /* CSS RESET */
+ /* CSS RESET */
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -57,10 +57,34 @@ body {
 	color: #333;
 }
 
+.top-bar{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 40px;
+	background-color: lightskyblue;
+	border-bottom: 3px solid salmon;
+	z-index: 9999;
+}
+
 .container {
-	width: 800px;
-	margin: auto;
+	width: 960px;
+	margin: 80px auto;
 	background-color: #ffffff;
+	position: relative;
+}
+
+.twitter {
+	width: 256px;
+	height: 256px;
+	background-image: url(gambar/twitter.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	text-indent: -9999px;
+	position: absolute;
+	top: -29px;
+	right: -35px;
 }
 
 .header {
@@ -92,41 +116,71 @@ body {
 
 
 .hero {
-	height: 280px;
+	height: 330px;
 	background-image: url(gambar/pemandangan.jpg);
 	background-size: cover;	
-	background-position: 0 -180px;
+	background-position: 0 -210px;
 	border-top: 5px solid salmon;
 	border-bottom: 5px solid lightskyblue; 
 }
 
+	/* Main */
 
-.content {
+.main {
+	width: 600px;
 	padding: 20px;
+	box-sizing: border-box;
+	float: left;
 }
 
-.content h2 {
+.main h2 {
 	font-size: 28px;
 	font-weight: bold;
 }
 
-.content .penulis {
+.main .penulis {
 	font-size: 13px;
 }
 
-.content .penulis a:hover {
+.main .penulis a:hover {
 	color: red;
 }
 
-.content .penulis a {
+.main .penulis a {
 	text-decoration: none;
 	color: salmon;
 }
 
-.content p {
+.main p {
 	margin-bottom: 20px;
 	font-size: 14px;
 }
+
+	/* Sidebar */
+
+.sidebar {
+	width: 300px;
+	float: right;
+	padding: 20px; 
+}
+
+.sidebar h3 {
+	font-weight: bold;
+	color: #666;
+}
+
+.sidebar img {
+	width: 70px;
+	height: 123px;
+	float: left;
+	padding: 10px;
+}
+
+.sidebar p {
+	font: 12px/18px arial;
+}
+
+	/* footer */
 
 .footer {
 	background-color: #333;
@@ -137,4 +191,22 @@ body {
 	color: #eaeaea;
 	text-align: center;
 	font-size: 12px;
+}
+
+
+
+	/* Clear Fix */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
 }
